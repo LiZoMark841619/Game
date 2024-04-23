@@ -9,7 +9,6 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up
 * How to run tests: Enter py or python main.py in the terminal in the dir where the file is or use the path if you are in other dir.
 
 ### Contribution guidelines ###
