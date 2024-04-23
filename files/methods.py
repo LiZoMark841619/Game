@@ -17,7 +17,7 @@ def get_valid_str(prompt: str, *args) -> str:
         else:
             print('Invalid value. Try again! ')
 
-def ask_to_play():
+def ask_to_play() -> bool:
     question = get_valid_str('Would you like to play? ', 'yes', 'no')
     if question == 'yes':
         return True
