@@ -22,3 +22,6 @@ class Guesses(Game):
             quit_continue = get_valid_str('Enter q or c to quit or continue! ', 'q', 'c')
             if quit_continue == 'q': break
             if quit_continue == 'c': continue
+    
+    def some_method(self):
+        pass
