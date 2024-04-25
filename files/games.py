@@ -20,6 +20,6 @@ class Game(ABC):
             player.set_name(input('Enter your name! '))
         return players
 
-    @abstractmethod
-    def some_method(self):
-        pass
+    # @abstractmethod
+    # def some_method(self):
+    #     pass
