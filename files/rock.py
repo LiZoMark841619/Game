@@ -22,7 +22,7 @@ class Rock(Game):
                 answers.append(question)
             start += 1
             print(f'{players[0].get_name()} you won! ' if (answers[0] == 'rock' and answers[1] not in ['rock', 'paper']) or 
-            (answers[0] == 'paper' and answers[1] not in ['paper', 'rock'])or answers[0] == 'scissors' and answers[1] not in ['scissors', 'rock']
+            (answers[0] == 'paper' and answers[1] not in ['paper', 'scissors'])or answers[0] == 'scissors' and answers[1] not in ['scissors', 'rock']
             else 'Even! Try again! ' if answers[0] == answers[1] else f'{players[1].get_name()} you won! ')
     
     def some_method(self):
