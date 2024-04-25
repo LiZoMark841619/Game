@@ -12,4 +12,8 @@ class Lotto(Game):
                 print('SameNumberError: Try again!!\n ')
             guesses.add(guess)
         winning_nums = set(random.sample(range(1, 91), 5))
-        return guesses, winning_nums
+        
+        print(f'\nWinning numbers: {winning_nums} - Your numbers: {guesses}\n')
+        good_nums = len(guesses & winning_nums)
+        if good_nums == len(winning_nums): print('CONGRATULATIONS! YOU WON THE LOTTERY! ')
+        print(f'You have {good_nums} match(es).')

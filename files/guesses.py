@@ -9,6 +9,8 @@ class Guesses(Game):
         count = 0
         random_number = random.randint(1, 100)
         
+        print('I thought of a number from 1 to 100! Find out what is it! ')
+
         while True:
             count += 1
             for player in players:
