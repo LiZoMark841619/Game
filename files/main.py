@@ -1,10 +1,11 @@
 from guesses import Guesses
 from lotto import Lotto
+from rock import Rock
 from methods import ask_to_play, get_valid_str
 
 if ask_to_play():
     
-    game = get_valid_str('Chose from Guesses and Lotto! ', 'guesses', 'lotto')
+    game = get_valid_str('Chose from Guesses, Lotto and Rock! ', 'guesses', 'lotto', 'rock')
     print(f'Welcome to my {game} game! ')
     
     if game == 'guesses':
@@ -19,3 +20,7 @@ if ask_to_play():
         good_nums = len(game[0] & game[1])
         if good_nums == len(game): print('CONGRATULATIONS! YOU WON THE LOTTERY! ')
         print(f'You have {good_nums} match(es).')
+    
+    elif game == 'rock':
+        test = Rock()
+        game = test.play()

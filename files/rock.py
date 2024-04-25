@@ -1,9 +1,8 @@
 from games import Game
-from players import Player
 from methods import get_valid_number, get_valid_str
 
 class Rock(Game):
-       
+
     def play(self):
         players = self.settings()
         start = 0
@@ -13,7 +12,7 @@ class Rock(Game):
             options = ['rock', 'paper', 'scissors']
             answers = []
             for player in players:
-                question = get_valid_str(f'{player.get_name()} chose from {options}', *options)
+                question = get_valid_str(f'{player.get_name()} chose from {options}! ', *options)
                 answers.append(question)
             start += 1
             
