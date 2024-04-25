@@ -12,6 +12,6 @@ class Game(ABC):
     def get_num_of_players(self) -> str:
         return [Player() for _ in range(self.nums)]
     
-    @abstractmethod
-    def some_method(self):
-        pass
+    # @abstractmethod
+    # def some_method(self):
+    #     pass
