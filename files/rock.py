@@ -3,14 +3,7 @@ from players import Player
 from methods import get_valid_number, get_valid_str
 
 class Rock(Game):
-    
-    def settings(self):
-        num_of_players = self.set_num_of_players(2)
-        players = self.get_num_of_players()
-        for player in players:
-            player.set_name(input('Enter your name! '))
-        return players
-    
+       
     def play(self):
         players = self.settings()
         start = 0
