@@ -18,7 +18,7 @@ def get_valid_str(prompt: str, *args) -> str:
             print('Invalid value. Try again! ')
 
 def ask_to_play() -> bool:
-    question = get_valid_str('Would you like to play? ', 'yes', 'no')
+    question = get_valid_str('Would you like to play? Enter yes or no? ', 'yes', 'no')
     if question == 'yes':
         return True
     else:

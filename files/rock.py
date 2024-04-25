@@ -2,6 +2,12 @@ from games import Game
 from methods import get_valid_number, get_valid_str
 
 class Rock(Game):
+    
+    def settings(self):
+        self.set_num_of_players(2)
+        players = self.get_num_of_players()
+        for player in players: player.set_name(input('Enter your name! '))
+        return players
 
     def play(self):
         players = self.settings()
@@ -15,10 +21,6 @@ class Rock(Game):
                 question = get_valid_str(f'{player.get_name()} chose from {options}! ', *options)
                 answers.append(question)
             start += 1
-            
-            print(f'{players[0].get_name()} you won! ' 
-            if (answers[0] == 'rock' and answers[1] not in ['rock', 'paper']) or 
-            (answers[0] == 'paper' and answers[1] not in ['paper', 'rock'])or
-            answers[0] == 'scissors' and answers[1] not in ['scissors', 'rock']
-            else 'Even! Try again! ' if answers[0] == answers[1] 
-            else f'{players[1].get_name()} you won! ')
+            print(f'{players[0].get_name()} you won! ' if (answers[0] == 'rock' and answers[1] not in ['rock', 'paper']) or 
+            (answers[0] == 'paper' and answers[1] not in ['paper', 'rock'])or answers[0] == 'scissors' and answers[1] not in ['scissors', 'rock']
+            else 'Even! Try again! ' if answers[0] == answers[1] else f'{players[1].get_name()} you won! ')
