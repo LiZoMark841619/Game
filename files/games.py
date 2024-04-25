@@ -1,5 +1,5 @@
-from methods import get_valid_number
 from player import Player
+
 class Game:
     
     def __str__(self) -> str:
@@ -12,7 +12,7 @@ class Game:
         return self.nums
     
     def set_game(self) -> list:
-        self.set_num_of_players((get_valid_number('How many players are going to play? ', 1, 4)))
+        if not self.nums:
+            self.set_num_of_players(2)
         players = [Player() for _ in range(self.get_num_of_players())]
-        for player in players: player.set_name(input('Enter your name! '))
         return players

@@ -4,8 +4,17 @@ from methods import get_valid_number, get_valid_str
 
 class Guesses(Game):
     
-    def play(self) -> str:
+    def settings(self) -> str:
+        num_of_players = self.set_num_of_players((get_valid_number('How many players are going to play? ', 1, 4)))
         players = self.set_game()
+        
+        for player in players: 
+            player.set_name(input('Enter your name! '))
+        
+        return players
+    
+    def play(self):
+        players = self.settings()
         count = 0
         random_number = random.randint(1, 100)
         
