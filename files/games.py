@@ -14,7 +14,7 @@ class Game(ABC):
         return [Player() for _ in range(self.nums)]
 
     def settings(self) -> str:
-        num_of_players = self.set_num_of_players((get_valid_number('How many players are going to play? ', 1, 4)))
+        self.set_num_of_players((get_valid_number('How many players are going to play? ', 1, 4)))
         players = self.get_num_of_players()
         for player in players:
             player.set_name(input('Enter your name! '))
