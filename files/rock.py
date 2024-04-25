@@ -17,16 +17,16 @@ class Rock(Game):
 
         while start < num_of_games:
             options = ['rock', 'paper', 'scissors']
-            computer = random.choice(options)
+            computer_num = random.choice(options)
             answers = []
             for player in players:
                 question = get_valid_str(f'{player.get_name()} chose from {options}! ', *options)
                 answers.append(question)
-                answers.append(computer)
+                answers.append(computer_num)
             start += 1
-            print(f'{players[0].get_name()} you won! ' if (answers[0] == 'rock' and answers[1] not in ['rock', 'paper']) or 
+            print(f'{players[0].get_name()} you won, Computer chose {computer_num}! ' if (answers[0] == 'rock' and answers[1] not in ['rock', 'paper']) or 
             (answers[0] == 'paper' and answers[1] not in ['paper', 'scissors'])or answers[0] == 'scissors' and answers[1] not in ['scissors', 'rock']
-            else 'Even! Try again! ' if answers[0] == answers[1] else 'Computer won! ')
+            else f'Even! Computer chose {computer_num}. Try again! ' if answers[0] == answers[1] else f'{players[0].get_name()} lost, Computer chose {computer_num}.')
     
     def some_method(self):
         pass
