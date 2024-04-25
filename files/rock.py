@@ -12,6 +12,7 @@ class Rock(Game):
         return players
     
     def play(self):
+        players = self.settings()
         start = 0
         num_of_games = get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
 
