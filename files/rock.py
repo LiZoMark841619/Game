@@ -1,5 +1,6 @@
 from games import Game
 from players import Player
+from methods import get_valid_number, get_valid_str
 
 class Rock(Game):
     
