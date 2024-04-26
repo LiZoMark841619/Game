@@ -5,7 +5,7 @@ from methods import get_valid_number, get_valid_str
 class Rock(Game):
     
     def settings(self) -> list:
-        num_of_players = self.set_num_of_players(1)
+        self.set_num_of_players(1)
         players = self.make_players()
         for player in players: player.set_name(input('Enter your name! '))
         return players
