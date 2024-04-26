@@ -24,5 +24,4 @@ class Guesses(Game):
             if quit_continue == 'q': break
             if quit_continue == 'c': continue
     
-    def some_method(self):
-        pass
+    def some_method(self): pass
