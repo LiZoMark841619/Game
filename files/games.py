@@ -17,7 +17,7 @@ class Game(ABC):
         return [Player() for _ in range(self.get_num_of_players())]
         
     def settings(self) -> list:
-        self.set_num_of_players((get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4)))
+        num_of_players = self.set_num_of_players((get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4)))
         players = self.make_players()
         
         for player in players:
