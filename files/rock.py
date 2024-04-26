@@ -4,13 +4,13 @@ from methods import get_valid_number, get_valid_str
 
 class Rock(Game):
     
-    def settings(self):
+    def settings(self) -> list:
         self.set_num_of_players(1)
-        players = self.get_num_of_players()
+        players = self.make_players()
         for player in players: player.set_name(input('Enter your name! '))
         return players
 
-    def play(self):
+    def play(self) -> str:
         players = self.settings()
         start = 0
         num_of_games = get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)

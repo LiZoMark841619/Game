@@ -4,7 +4,7 @@ from methods import get_valid_number, get_valid_str
 
 class Guesses(Game):
     
-    def play(self):
+    def play(self) -> str:
         players = self.settings()
         count = 0
         random_number = random.randint(1, 100)
