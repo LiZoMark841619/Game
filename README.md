@@ -1,4 +1,4 @@
-# Guesses-lottery games #
+# Guesses-lottery-rock, paper, scissors games #
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
