@@ -1,5 +1,4 @@
 from players import Player
-from methods import get_valid_number
 from abc import ABC, abstractmethod
 
 class Game(ABC):
@@ -17,11 +16,10 @@ class Game(ABC):
         return [Player() for _ in range(self.get_num_of_players())]
         
     def settings(self) -> list:
-        self.set_num_of_players((get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4)))
         players = self.make_players()
         for player in players:
             player.set_name(input('Enter your name! '))
         return players
-
+    
     @abstractmethod
     def some_method(self): pass
