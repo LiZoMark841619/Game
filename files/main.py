@@ -1,26 +1,18 @@
 from guesses import Guesses
 from lotto import Lotto
 from rock import Rock
-from valids import Valids
 from menu import Menu
 
 menu = Menu()
-print(menu)
-menu.set_choice(menu.get_valid_number('Enter a number from 0 - 4 from the menu! ', 0, 4))
 
-menu.display()
-    
-game = Valids().get_valid_str('Chose from Guesses, Lotto and Rock! ', 'guesses', 'lotto', 'rock')
-print(f'Welcome to my {game.title()} game! ')
+if menu.ask_to_play():
+    game = menu.chose_game()
 
-if game == 'guesses':
-    test = Guesses()
-    game = test.play()
-    
-elif game == 'lotto':
-    test = Lotto()
-    game = test.display()
+    if game == 'guesses':
+        Guesses().play()
+        
+    elif game == 'lotto':
+        Lotto().display()
 
-elif game == 'rock':
-    test = Rock()
-    game = test.play()
+    elif game == 'rock':
+        Rock().play()

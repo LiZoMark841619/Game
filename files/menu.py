@@ -29,11 +29,9 @@ class Menu(Valids):
         else: print("OK, let's get going!"); return False
 
     def display(self):
+        request = self.get_choice()
         
-        if self.get_choice() == 0: self.ask_to_play()
-        
-        elif self.get_choice() == 1: self.chose_game()
-            
-        elif self.get_choice() == 2: self.set_players()
-        
-        elif self.get_choice() == 4: self.want_to_quit()
+        if request == 0: self.ask_to_play()
+        elif request == 1: self.chose_game()
+        elif request == 2: self.set_players()
+        elif request == 4: self.want_to_quit()
