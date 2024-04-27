@@ -1,9 +1,9 @@
 from guesses import Guesses
 from lotto import Lotto
 from rock import Rock
-from menu import Menu
+from menu_game import GameMenu
 
-menu = Menu()
+menu = GameMenu()
 
 if menu.ask_to_play():
     game = menu.chose_game()
