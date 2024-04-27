@@ -3,9 +3,9 @@ from lotto import Lotto
 from rock import Rock
 from valids import Valids
 
-if Valids.ask_to_play():
+if Valids().ask_to_play():
     
-    game = Valids.get_valid_str('Chose from Guesses, Lotto and Rock! ', 'guesses', 'lotto', 'rock')
+    game = Valids().get_valid_str('Chose from Guesses, Lotto and Rock! ', 'guesses', 'lotto', 'rock')
     print(f'Welcome to my {game.title()} game! ')
     
     if game == 'guesses':

@@ -18,8 +18,7 @@ class Game(ABC, Valids):
         
     def settings(self) -> list:
         players = self.make_players()
-        for player in players:
-            player.set_name(input('Enter your name! '))
+        for player in players: player.set_name(input('Enter your name! '))
         return players
     
     @abstractmethod
