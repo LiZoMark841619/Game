@@ -10,14 +10,6 @@ class GameMenu(Menu, Valids):
     def __repr__(self) -> str:
         return f'Menu({self.options})'
     
-    def set_choice(self, num: int) -> None:
-        try: self.options[num]
-        except KeyError: print('Not a valid option')
-        self.num = num
-    
-    def get_choice(self) -> str:
-        return self.num
-    
     def ask_to_play(self) -> bool:
         question = self.get_valid_str('Would you like to play? Enter yes or no? ', 'yes', 'no')
         if question == 'yes': return True
