@@ -1,11 +1,11 @@
 from guesses import Guesses
 from lotto import Lotto
 from rock import Rock
-from methods import ask_to_play, get_valid_str
+from valids import Valids
 
-if ask_to_play():
+if Valids.ask_to_play():
     
-    game = get_valid_str('Chose from Guesses, Lotto and Rock! ', 'guesses', 'lotto', 'rock')
+    game = Valids.get_valid_str('Chose from Guesses, Lotto and Rock! ', 'guesses', 'lotto', 'rock')
     print(f'Welcome to my {game.title()} game! ')
     
     if game == 'guesses':
