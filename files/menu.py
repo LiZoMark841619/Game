@@ -1,3 +1,1 @@
-class Menu:
-    
-    pass
+class Menu: pass

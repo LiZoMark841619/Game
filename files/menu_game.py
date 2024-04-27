@@ -11,6 +11,8 @@ class GameMenu(Menu, Valids):
         return f'Menu({self.options})'
     
     def set_choice(self, num: int) -> None:
+        try: self.options[num]
+        except KeyError: print('Not a valid option')
         self.num = num
     
     def get_choice(self) -> str:
@@ -21,12 +23,9 @@ class GameMenu(Menu, Valids):
         if question == 'yes': return True
         else: print("Understood, good bye!"); return False
     
-    def chose_game(self) -> bool:
+    def chose_game(self) -> str:
         game = self.get_valid_str(f'Chose from {[cls.__name__ for cls in Game.__subclasses__()]}! ', 'guesses', 'lotto', 'rock')
         print(f'Welcome to my {game.title()} game! '); return game
-        
-    def set_players(self) -> int:
-        self.get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4)
     
     def want_to_quit(self) -> bool:
         question = self.get_valid_str('Would you like to quit? Enter yes or no? ', 'yes', 'no')
