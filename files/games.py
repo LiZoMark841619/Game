@@ -1,7 +1,8 @@
 from players import Player
+from valids import Valids
 from abc import ABC, abstractmethod
 
-class Game(ABC):
+class Game(ABC, Valids):
 
     def __str__(self) -> str:
         return f'Game: {self.__class__.__name__}'
