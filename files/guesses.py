@@ -4,7 +4,7 @@ from games import Game
 class Guesses(Game):
     
     def play(self) -> str:
-        self.set_num_of_players((self.get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4)))
+        self.set_num_of_players(self.get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4))
         players = self.settings()
         count = 0
         random_number = random.randint(1, 100)
