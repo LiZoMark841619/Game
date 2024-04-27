@@ -12,7 +12,7 @@ if menu.ask_to_play():
         Guesses().play()
         
     elif game == 'lotto':
-        Lotto().display()
+        Lotto().play()
 
     elif game == 'rock':
         Rock().play()
