@@ -4,13 +4,13 @@ from valids import Valids
 class Menu(Valids):
     
     def __init__(self, choice: int,
-    options: dict={
-                     0:'Ask to play',
-                     1:'Chose the game',
-                     2:'Number of players',
-                     3:'Names of players',
-                     4: 'Good bye'}) -> None:
-        
+                        options: dict={
+                                        0:'Ask to play',
+                                        1:'Chose the game',
+                                        2:'Number of players',
+                                        3:'Names of players',
+                                        4: 'Good bye'}) -> None:
+                            
         self.options = options
         if choice in options:
             self.choice = choice
