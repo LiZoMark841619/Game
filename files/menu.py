@@ -1,7 +1,7 @@
-from valids import Valids
+from valids import Valid
 from typing import Any
 
-class Menu(Valids):
+class Menu(Valid):
             
     def __repr__(self) -> str:
         return f'Menu({self.__class__.__name__})'

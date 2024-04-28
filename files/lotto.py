@@ -6,7 +6,7 @@ class Lotto(Game):
     def play(self) -> tuple:
         guesses = set()
         while len(guesses) < 5:  
-            guess = self.get_valid_number(prompt='Enter your number (1-90) ! ', value_min=1, value_max=90)
+            guess = self.get_valid_number(prompt='Enter your number from 1 to 90! ', value_min=1, value_max=90)
             if guess in guesses:
                 print('SameNumberError: Try again!!\n ')
             guesses.add(guess)

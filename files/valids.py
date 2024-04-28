@@ -1,4 +1,4 @@
-class Valids:
+class Valid:
     
     def get_valid_number(self, prompt: str, value_min: int, value_max: int) -> int:
         while True:
@@ -6,7 +6,7 @@ class Valids:
                 value = int(input(prompt))
                 if value_min <= value <= value_max: return value
                 else: print('The number is out of range.\n')
-            except ValueError: print('Enter a valid number!\n')
+            except ValueError: print('Invalid number. Try again!\n')
 
     def get_valid_str(self, prompt: str, *args) -> str:
         while True:

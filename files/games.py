@@ -1,7 +1,7 @@
 from players import Player
-from valids import Valids
+from valids import Valid
 
-class Game(Valids):
+class Game(Valid):
 
     def __str__(self) -> str:
         return f'Game: {self.__class__.__name__}'
