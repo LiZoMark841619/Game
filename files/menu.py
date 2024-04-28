@@ -2,9 +2,7 @@ from valids import Valids
 from typing import Any
 
 class Menu(Valids):
-    
-    def __init__(self) -> None: pass
-        
+            
     def __repr__(self) -> str:
         return f'Menu({self.__class__.__name__})'
     
