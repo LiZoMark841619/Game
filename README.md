@@ -4,12 +4,12 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary: This is a Guesses game that runs in the terminal. 
+* Quick summary: This is a Game repo including some kind of games separated. It can run in the terminal and can be used in REPL as an imported module.
 * Version: 1.0
 
 ### How do I get set up? ###
 
-* How to run tests: Enter py or python main.py in the terminal in the dir where the file is or use the path if you are in other dir.
+* How to run tests: Enter py or python main.py in the terminal in the dir where the file is or use the path if needed.
 
 ### Contribution guidelines ###
 
