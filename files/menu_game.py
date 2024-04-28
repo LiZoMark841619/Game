@@ -1,14 +1,10 @@
 from menu import Menu
 from games import Game
-from valids import Valids
 
-class GameMenu(Menu, Valids):
+class GameMenu(Menu):
     
-    def __init__(self, options: dict={0:'Ask to play', 1:'Chose the game', 2:'Number of players', 3:'Names of players', 4: 'Want to quit'}) -> None:               
-        self.options = options
-
     def __repr__(self) -> str:
-        return f'Menu({self.options})'
+        return f'Menu({self.__class__.__name__})'
     
     def ask_to_play(self) -> bool:
         question = self.get_valid_str('Would you like to play? Enter yes or no? ', 'yes', 'no')
