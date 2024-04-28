@@ -3,14 +3,16 @@ from games import Game
 
 class Guesses(Game):
     
-    def play(self) -> str:
-        self.set_num_of_players(self.get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4))
-        players = self.set_players()
-        count = 0
-        random_number = random.randint(1, 100)
+    def game_set(self):
+        set_num_players = self.set_num_of_players(self.get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4))
+        players = self.set_players_names()
+        return players
         
+    def play(self):
+        players = self.game_set()
         print('I thought of a number from 1 to 100! Find out what is it! ')
-
+        random_number = random.randint(1, 100)
+        count = 0        
         while True:
             count += 1
             for player in players:
@@ -22,5 +24,3 @@ class Guesses(Game):
             quit_continue = self.get_valid_str('Enter q or c to quit or continue! ', 'q', 'c')
             if quit_continue == 'q': break
             if quit_continue == 'c': continue
-    
-    def some_method(self): pass
