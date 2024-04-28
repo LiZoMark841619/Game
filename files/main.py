@@ -4,6 +4,7 @@ from rock import Rock
 from menu import Menu
 from menu_game import GameMenu
 
+
 menu = GameMenu()
 
 if menu.ask_to_play():
