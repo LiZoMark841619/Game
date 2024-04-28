@@ -20,7 +20,6 @@ class Guesses(Game):
                 if guess < random_number: print('You number is less than I thought!\n ')
                 elif guess > random_number: print('Your number is greater than I thought!\n')
                 else: print(f'You just hit, {player.get_name()} won. '); return
-                    
             quit_continue = self.get_valid_str('Enter q or c to quit or continue! ', 'q', 'c')
             if quit_continue == 'q': break
             if quit_continue == 'c': continue
