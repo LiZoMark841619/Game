@@ -16,7 +16,7 @@ class Game(ABC, Valids):
     def make_players(self) -> list:
         return [Player() for _ in range(self.get_num_of_players())]
         
-    def settings(self) -> list:
+    def set_players(self) -> list:
         players = self.make_players()
         for player in players: player.set_name(input('Enter your name! '))
         return players

@@ -4,14 +4,14 @@ from players import Player
 
 class Rock(Game):
     
-    def settings(self) -> list:
+    def set_players(self) -> list:
         self.set_num_of_players(1)
         player = Player()
         player.set_name(input('Enter your name! '))
         return player
 
     def play(self) -> str:
-        player = self.settings()
+        player = self.set_players()
         num_of_games = self.get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
         for _ in range(num_of_games):
             options = ['rock', 'paper', 'scissors']
