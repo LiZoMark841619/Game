@@ -16,4 +16,4 @@ while True:
     good_bye = Menu()
     good_bye.addItem('\nWould you like to quit? Enter yes or no! ', 'yes', 'no')
     if good_bye.render() == 'yes': print('Thank you for your time! Good bye and have a nice day!'); break
-    else: print("Thank you for chosing us to play again!\n"); continue
+    print("Thank you for chosing us to play again!\n"); continue
