@@ -10,10 +10,10 @@ class Guesses(Game):
     
     def play(self):
         players = self.game_set()
-        print('I thought of a number from 1 to 100! Find out what is it! ')
         return players, random.randint(1, 100), 0
         
     def display(self):
+        print('I thought of a number from 1 to 100! Find out what is it! ')
         players, random_number, count = self.play()        
         while True:
             count += 1

@@ -11,7 +11,7 @@ while True:
     game = menu.chose_game()
     if game == 'guesses': Guesses().display()
     elif game == 'lotto': Lotto().display()
-    elif game == 'rock': Rock().display()
+    elif game == 'rock': Rock().play()
 
     good_bye = Menu()
     good_bye.addItem('Would you like to quit? Enter yes or no! ', 'yes', 'no')
