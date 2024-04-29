@@ -8,8 +8,7 @@ class Rock(Game):
         self.set_num_of_players(1)
         player = Player()
         player.set_name(input('Enter your name! '))
-        num_of_games = self.get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
-        return player, num_of_games
+        return player, self.get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
 
     def play(self) -> None:
         player, num_of_games = self.game_set()
