@@ -5,11 +5,11 @@ class Valid:
             try: 
                 value = int(input(prompt))
                 if value_min <= value <= value_max: return value
-                else: print('The number is out of range.\n')
+                else: print('The number is out of range. Try again!\n')
             except ValueError: print('Invalid number. Try again!\n')
 
     def get_valid_str(self, prompt: str, *args) -> str:
         while True:
             value = input(prompt).lower()
             if value in args: return value
-            else: print('Invalid value. Try again! ')
+            else: print('Invalid value. Try again!\n')
