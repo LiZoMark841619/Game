@@ -8,7 +8,7 @@ class Valid:
                 print('The number is out of range. Try again!\n')
             except ValueError: print('Invalid number. Try again!\n')
 
-    def get_valid_str(self, prompt: str, *args) -> str:
+    def get_valid_string(self, prompt: str, *args) -> str:
         while True:
             value = input(prompt).lower()
             if value in args: return value
