@@ -4,14 +4,14 @@ from games import Game
 class Lotto(Game):
     
     def play(self) -> tuple:
-        guesses = set()
+        guesses: set[int] = set()
         while len(guesses) < 5:  
             guess = self.get_valid_number('Enter your number from 1 to 90! ', 1, 90)
             if guess in guesses: print('SameNumberError: Try again!\n')
             guesses.add(guess)
         return guesses, set(random.sample(range(1, 91), 5))
         
-    def display(self):
+    def display(self) -> None:
         guesses, winning_nums = self.play()
         print(f'\nWinning numbers: {winning_nums} - Your numbers: {guesses}\n')
         good_nums = len(guesses & winning_nums)
