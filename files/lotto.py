@@ -10,9 +10,8 @@ class Lotto(Game):
             if guess in guesses:
                 print('SameNumberError: Try again!!\n ')
             guesses.add(guess)
-        winning_nums = set(random.sample(range(1, 91), 5))
-        return guesses, winning_nums
-    
+        return guesses, set(random.sample(range(1, 91), 5))
+        
     def display(self):
         guesses, winning_nums = self.play()
         print(f'\nWinning numbers: {winning_nums} - Your numbers: {guesses}\n')
