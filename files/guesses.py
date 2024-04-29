@@ -8,14 +8,14 @@ class Guesses(Game):
         players = self.set_players_names()
         return players
     
-    def starting(self):
+    def play(self):
         players = self.game_set()
         print('I thought of a number from 1 to 100! Find out what is it! ')
         random_number, count = random.randint(1, 100), 0
-        return players,random_number,count
+        return players, random_number,count
         
-    def play(self):
-        players, random_number, count = self.starting()        
+    def display(self):
+        players, random_number, count = self.play()        
         while True:
             count += 1
             for player in players:

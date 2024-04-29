@@ -11,6 +11,10 @@ class Lotto(Game):
                 print('SameNumberError: Try again!!\n ')
             guesses.add(guess)
         winning_nums = set(random.sample(range(1, 91), 5))
+        return guesses, winning_nums
+    
+    def display(self):
+        guesses, winning_nums = self.play()
         print(f'\nWinning numbers: {winning_nums} - Your numbers: {guesses}\n')
         good_nums = len(guesses & winning_nums)
         if good_nums == len(winning_nums): print('CONGRATULATIONS! YOU WON THE LOTTERY! ')

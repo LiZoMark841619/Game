@@ -9,9 +9,9 @@ while True:
     if not menu.ask_to_play(): break
     
     game = menu.chose_game()
-    if game == 'guesses': Guesses().play()
-    elif game == 'lotto': Lotto().play()
-    elif game == 'rock': Rock().play()
+    if game == 'guesses': Guesses().display()
+    elif game == 'lotto': Lotto().display()
+    elif game == 'rock': Rock().display()
 
     good_bye = Menu()
     good_bye.addItem('Would you like to quit? Enter yes or no! ', 'yes', 'no')
