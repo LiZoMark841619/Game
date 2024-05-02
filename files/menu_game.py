@@ -13,4 +13,4 @@ class GameMenu(Menu):
     
     def want_to_quit(self) -> bool:
         if self.get_valid_string('Would you like to quit? Enter yes or no? ', 'yes', 'no') == 'yes': print('Understood, good bye!'); return True
-        print("OK, let's get going!"); return False
+        print("OK, let's get going!")
