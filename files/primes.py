@@ -1,4 +1,5 @@
 from games import Game
+from menu import Menu
 import array
 from typing import Generator
 
@@ -24,13 +25,11 @@ class Primes(Game):
         primes, not_primes = self.contain_primes(n), self.contain_not_primes(n)
         yield from (num for num in not_primes for i in range(len(primes)) for k in range(i+1) if num == primes[i] * primes[k])
 
-if __name__ == '__main__':
-    test_one = Primes()
-    array_test_primes = test_one.contain_primes(91)
-    print(*array_test_primes)
-    array_test_not_primes = test_one.contain_not_primes(91)
-    print(*array_test_not_primes)
-    array_test_factors = test_one.contain_prime_factors(91)
-    print(*array_test_factors)
-    
-    
+    def play(self):
+        self.set_num_of_players(1)
+        self.set_players_names()
+        num = self.get_valid_number('Enter a number from 2 to 500000! ', 2, 500000)
+        menu = Menu()
+        menu.add_item('Chose from the options below: [primes, factors] to collect numbers! ', 'primes', 'factors')
+        if menu.render() == 'primes': print(*self.contain_primes(num))
+        elif menu.render() == 'factors': print(*self.contain_prime_factors(num))
