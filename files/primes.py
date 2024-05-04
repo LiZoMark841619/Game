@@ -16,15 +16,16 @@ class Primes(Game):
         return container
     
     def contain_not_primes(self, n: int) -> array:
-        primes = self.contain_primes(n)
-        return array.array('Q', [num for num in range(n+1) if num not in primes])
+        return array.array('Q', [num for num in range(n+1) if num not in self.contain_primes(n)])
     
     def collect_semi_primes(self, n: int) -> array:
-        primes = self.contain_primes(n)
-        not_primes = self.contain_not_primes(n)
-        
-        
-        
+        primes, not_primes = self.contain_primes(n), self.contain_not_primes(n)
+        result = array.array('Q')
+        for num, i in itertools.product(not_primes, len(primes)):
+            for k in range(i):
+                if num == primes[i] * primes[k]
+                result.append(num)
+        return result
 
 if __name__ == '__main__':
     test_one = Primes()
