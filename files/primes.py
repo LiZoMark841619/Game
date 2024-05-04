@@ -30,6 +30,7 @@ class Primes(Game):
         self.set_players_names()
         num = self.get_valid_number('Enter a number from 2 to 500000! ', 2, 500000)
         menu = Menu()
-        menu.add_item('Chose from the options below: [primes, factors] to collect numbers! ', 'primes', 'factors')
+        menu.add_item('Chose from the options below: [primes, factors, semi-primes] to collect numbers! ', 'primes', 'factors', 'semi-primes')
         if menu.render() == 'primes': print(*self.contain_primes(num))
         elif menu.render() == 'factors': print(*self.contain_prime_factors(num))
+        else: print(self.collect_semi_primes(num))
