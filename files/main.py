@@ -1,3 +1,4 @@
+from primes import Primes
 from guesses import Guesses
 from lotto import Lotto
 from rock import Rock
@@ -13,6 +14,7 @@ def main():
         if game == 'guesses': Guesses().play()
         elif game == 'lotto': Lotto().display()
         elif game == 'rock': Rock().play()
+        elif game == 'primes': Primes().play()
 
         good_bye = Menu()
         good_bye.add_item('\nWould you like to quit? Enter yes or no! ', 'yes', 'no')
