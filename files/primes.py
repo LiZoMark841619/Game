@@ -1,26 +1,26 @@
 from players import Player
 from games import Game
 from menu import Menu
-import array
 from typing import Generator
+from array import array
 
 class Primes(Game):
     
     def collect_primes(self, n: int) -> Generator:
         yield from (i for i in range(2, n+1) if sum(i % k == 0 for k in range(1, int(i**0.5) + 1)) == 1)
     
-    def store_primes(self, n: int) -> array.array:
+    def store_primes(self, n: int) -> array:
         primes, container = self.collect_primes(n), array.array('Q')
         while True:
             try: container.append(next(primes))
             except StopIteration: break
         return container
     
-    def store_not_primes(self, n: int) -> array.array:
-        return array.array('Q', [num for num in range(n+1) if num not in self.store_primes(n)])
+    def store_not_primes(self, n: int) -> array:
+        return array('Q', [num for num in range(n+1) if num not in self.store_primes(n)])
     
-    def store_prime_factors(self, n: int) -> array.array:
-        return array.array('Q', [num for num in self.store_primes(n) if n % num == 0])
+    def store_prime_factors(self, n: int) -> array:
+        return array('Q', [num for num in self.store_primes(n) if n % num == 0])
     
     def collect_semi_primes(self, n: int) -> Generator:
         primes, not_primes = self.store_primes(n), self.store_not_primes(n)
