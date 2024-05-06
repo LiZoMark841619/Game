@@ -22,6 +22,7 @@ class Primes(Game):
     def store_prime_factors(self, n: int) -> array:
         return array('Q', [num for num in self.store_primes(n) if n % num == 0])
     
+    #It is an advanced problem to be solved in CodeCademy.
     def collect_semi_primes(self, n: int) -> Generator:
         primes, not_primes = self.store_primes(n), self.store_not_primes(n)
         yield from (num for num in not_primes for i in range(len(primes)) for k in range(i+1) if num == primes[i] * primes[k])
