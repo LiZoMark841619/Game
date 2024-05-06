@@ -6,8 +6,8 @@ class Game(Valid):
     def __repr__(self) -> str:
         return f'Game: {self.__class__.__name__}'
 
-    def set_num_of_players(self, nums: int) -> None:
-        self.nums = nums
+    def set_num_of_players(self) -> None:
+        self.nums = self.get_valid_number('How many players are going to play? Set from 1 to 4! ', 1, 4)
 
     def get_num_of_players(self) -> int:
         return self.nums
