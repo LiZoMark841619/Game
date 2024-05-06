@@ -29,7 +29,7 @@ class Primes(Game):
 
     def game_set(self):
         player = Player()
-        player.set_name(input('Enter your name!'))
+        player.set_name()
         return player
     
     def play(self):

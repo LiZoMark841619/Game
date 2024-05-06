@@ -3,7 +3,7 @@ from valids import Valid
 
 class Game(Valid):
 
-    def __str__(self) -> str:
+    def __repr__(self) -> str:
         return f'Game: {self.__class__.__name__}'
 
     def set_num_of_players(self, nums: int) -> None:
@@ -17,5 +17,5 @@ class Game(Valid):
         
     def set_players_names(self) -> list:
         players = self.make_players()
-        for player in players: player.set_name(input('Enter your name! '))
+        for player in players: player.set_name()
         return players

@@ -6,7 +6,7 @@ class Rock(Game):
     
     def game_set(self) -> tuple:
         player = Player()
-        player.set_name(input('Enter your name! '))
+        player.set_name()
         return player, self.get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
 
     def play(self) -> None:
