@@ -11,11 +11,8 @@ def main():
         if not menu.ask_to_play(): break
         
         game = menu.choose_game()
-        for klass in [Guesses, Rock, Primes]:
-            if klass.__name__ == game:
-                klass().play()
-        if game == 'Lotto':
-            Lotto().display()
+        for klass in [Primes, Guesses, Lotto, Rock]:
+            if klass.__name__ == game: klass().play()
 
         good_bye = Menu()
         good_bye.add_item('\nWould you like to quit? Enter yes or no! ', 'yes', 'no')

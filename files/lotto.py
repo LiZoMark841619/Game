@@ -9,10 +9,7 @@ class Lotto(Game):
             guess = self.get_valid_number('Enter your number from 1 to 90! ', 1, 90)
             if guess in guesses: print('SameNumberError: Try again!\n')
             guesses.add(guess)
-        return guesses, set(random.sample(range(1, 91), 5))
-        
-    def display(self) -> None:
-        guesses, winning_nums = self.play()
+        winning_nums = set(random.sample(range(1, 91), 5))
         print(f'\nWinning numbers: {winning_nums} - Your numbers: {guesses}\n')
         good_nums = len(guesses & winning_nums)
         if good_nums == len(winning_nums): print('CONGRATULATIONS! YOU WON THE LOTTERY! ')
