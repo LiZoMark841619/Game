@@ -1,4 +1,6 @@
-class Valid:
+from instancetree import InstanceTree
+
+class Valid(InstanceTree):
     
     def get_valid_number(self, prompt: str, value_min: int, value_max: int) -> int:
         while True:

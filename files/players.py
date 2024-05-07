@@ -1,4 +1,6 @@
-class Player:
+from instancetree import InstanceTree
+
+class Player(InstanceTree):
     
     def set_name(self) -> None:
         while True:
