@@ -4,8 +4,7 @@ from games import Game
 class Guesses(Game):
     
     def game_set(self) -> tuple:
-        self.set_num_of_players()
-        self.set_players()
+        self.set_num_of_players(); self.set_players()
         players = self.get_players()
         for player in players: player.set_name()
         return players, random.randint(1, 100), 0
