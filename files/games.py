@@ -9,10 +9,8 @@ class Game(Valid):
     def get_num_of_players(self) -> int:
         return self.nums
     
-    def make_players(self) -> list:
-        return [Player() for _ in range(self.get_num_of_players())]
+    def set_players(self) -> list:
+        self.players = [Player() for _ in range(self.get_num_of_players())]
         
-    def set_players_names(self) -> list:
-        players = self.make_players()
-        for player in players: player.set_name()
-        return players
+    def get_players(self) -> list:
+        return self.players

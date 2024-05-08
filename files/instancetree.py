@@ -1,7 +1,7 @@
 class InstanceTree:
     
     def __str__(self):
-        return f'Object created from {self.__class__.__name__} class attributes are {self.attrs_()}'
+        return f'Object created from {self.__class__.__name__} class with attributes: {self.attrs_()}'
     
     def attrs_(self):
         for attr in self.__dict__:

@@ -5,7 +5,10 @@ class Guesses(Game):
     
     def game_set(self) -> tuple:
         self.set_num_of_players()
-        return self.set_players_names(), random.randint(1, 100), 0
+        self.set_players()
+        players = self.get_players()
+        for player in players: player.set_name()
+        return players, random.randint(1, 100), 0
         
     def play(self) -> None:
         players, random_number, count = self.game_set()
