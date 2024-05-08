@@ -1,5 +1,4 @@
-from players import Player
-from games import Game
+from settings import Player, Game
 from menu import Menu
 from typing import Generator
 from array import array

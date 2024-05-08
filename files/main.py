@@ -1,8 +1,6 @@
+from menu import GameMenu
+from games import Guesses, Lotto, Rock
 from primes import Primes
-from guesses import Guesses
-from lotto import Lotto
-from rock import Rock
-from game_menu import GameMenu
 
 def main():
     while True:
