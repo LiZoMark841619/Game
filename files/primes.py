@@ -4,7 +4,6 @@ from typing import Generator
 from array import array
 
 class Primes(Game):
-    
     def collect_primes(self, n: int) -> Generator:
         yield from (i for i in range(2, n+1) if sum(i % k == 0 for k in range(1, int(i**0.5) + 1)) == 1)
     
@@ -35,6 +34,6 @@ class Primes(Game):
         num = self.get_valid_number('Enter a number from 2 to 500000! ', 2, 500000)
         menu = Menu()
         menu.add_item(f'{player.get_name()}, chose from [primes, factors, semi-primes] to list numbers! ', 'primes', 'factors', 'semi-primes')
-        if menu.render() == 'primes': print(*self.store_primes(num))
-        elif menu.render() == 'factors': print(*self.store_prime_factors(num))
-        else: print(list(self.collect_semi_primes(num)))
+        print(self.store_primes(num) if menu.render()=='primes'
+        else self.store_prime_factors(num) if menu.render()=='factors'
+        else list(self.collect_semi_primes(num)))
