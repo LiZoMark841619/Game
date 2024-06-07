@@ -14,5 +14,4 @@ def main():
         if menu.render() == 'yes': print('Thank you for your time! Good bye and have a nice day!'); return
         else: print("Thank you for chosing us to play again!\n")
 
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__': main()

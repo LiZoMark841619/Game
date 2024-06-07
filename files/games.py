@@ -3,10 +3,9 @@ from settings import Player, Game
 
 class Guesses(Game):
     def game_set(self) -> tuple:
-        self.set_num_of_players(); self.set_players()
-        players = self.get_players()
-        for player in players: player.set_name()
-        return players
+        self.set_num_of_players()
+        self.set_players()
+        return self.get_players()
         
     def play(self) -> None:
         players, random_number, count = self.game_set(), random.randint(1, 100), 0
@@ -34,15 +33,13 @@ class Lotto(Game):
         
 class Rock(Game):
     def game_set(self) -> tuple:
-        player = Player()
-        player.set_name()
-        return player, self.get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
+        return Player(), self.get_valid_number('Enter the number of games you would like to play (1-5)! ', 1, 5)
 
     def play(self) -> None:
         player, num_of_games = self.game_set()
         for _ in range(num_of_games):
             options = ['rock', 'paper', 'scissors']
-            computer, user = random.choice(options), self.get_valid_string(f'{player.get_name()} chose from {options}! ', *options)
+            computer, user = random.choice(options), self.get_valid_string(f'{player.get_name()} choose from {options}! ', *options)
             result = computer, user
             
             print(f'{player.get_name()} you won, Computer chose {computer}! '

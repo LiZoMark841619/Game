@@ -25,9 +25,7 @@ class Primes(Game):
         yield from (num for num in not_primes for i in range(len(primes)) for k in range(i+1) if num == primes[i] * primes[k])
 
     def game_set(self):
-        player = Player()
-        player.set_name()
-        return player
+        return Player()
     
     def play(self):
         player = self.game_set()
