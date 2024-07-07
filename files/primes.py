@@ -5,7 +5,7 @@ from array import array
 
 class Primes(Game):
     def collect_primes(self, n: int) -> Generator:
-        yield from (i for i in range(2, n+1) if sum(i % k == 0 for k in range(2, int(i**0.5) + 1)) == 1)
+        yield from (i for i in range(2, n+1) if sum(i % k == 0 for k in range(1, int(i**0.5) + 1)) == 1)
     
     def store_primes(self, n: int) -> array:
         primes, container = self.collect_primes(n), array('Q')
