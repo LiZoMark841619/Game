@@ -19,7 +19,7 @@ class Game(Valid):
     def get_num_of_players(self) -> int:
         return self.__nums
     
-    def set_players(self) -> list:
+    def set_players(self) -> None:
         self.__players = [Player() for _ in range(self.get_num_of_players())]
         
     def get_players(self) -> list:

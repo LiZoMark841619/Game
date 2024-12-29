@@ -2,7 +2,7 @@ import random
 from settings import Player, Game
 
 class Guesses(Game):
-    def game_set(self) -> tuple:
+    def game_set(self) -> list:
         self.set_num_of_players()
         self.set_players()
         return self.get_players()
@@ -20,7 +20,7 @@ class Guesses(Game):
                 print('You number is less than I thought!\n ' if guess < random_number else 'Your number is greater than I thought!\n')
                 
 class Lotto(Game):
-    def play(self) -> tuple:
+    def play(self) -> None:
         guesses: set[int] = set()
         while len(guesses) < 5:  
             guess = self.get_valid_number('Enter your number from 1 to 90! ', 1, 90)
